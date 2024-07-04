@@ -1,9 +1,9 @@
-package web;
+package com.example.demo.web;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import service.Service;
+import com.example.demo.service.Service;
 
 @RestController
 public class Controller {
@@ -11,7 +11,7 @@ public class Controller {
     
     @GetMapping("/greeting")
     public String greeting() {
-        result = GreetingService.greeting();
+        result = Service.greeting();
         return result;
     }
 }
