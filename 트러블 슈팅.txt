@@ -3,8 +3,8 @@
 2. MySQL 의존성 추가 후 연동
 
 7/5
-1. index.html 파일을 static -> templates 폴더로 이동하자 인식 불가
-    1-1. 해결: thymeleaf 의존성을 추가하면서 해결됨
+1. thymeleaf 의존성을 추가하자 static 폴더 내의 index.html 파일 인식 불가
+    1-1. 해결: index.html 파일을 templates 폴더로 이동
     1-2. 의문: thymeleaf가 꼭 필요할까?
         1-2-1. thymeleaf를 사용하는 경우와 REST 기반으로 개발하는 경우의 장단점 비교하기
             
@@ -17,9 +17,9 @@
             -프론트와 백엔드가 규정된 API를 통해 데이터를 주고받으므로 개발자간의 소통이 쉬움
 
         1-2-2. REST 기반으로 개발하기로 결정
-            thymeleaf 의존성 제거 후 index.html 파일을 static 폴더로 이동
+            thymeleaf 의존성 제거 후 index.html 파일 원위치
 
-            *REST API 디자인 가이드
+            ***REST API 디자인 가이드***
                 -URI는 정보의 자원을 표현해야 함
                 -자원에 대한 행위는 HTTP Method(GET, POST, PUT, PATCH, DELETE)로 표현
 
