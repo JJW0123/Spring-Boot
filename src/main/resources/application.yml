@@ -1,3 +1,20 @@
+spring:
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://127.0.0.1:3306/Chat_DB?serverTimezone=Asia/Seoul&characterEncoding=UTF-8
+    username: root #수정하기(보안)
+    password: 0000 #수정하기(보안)
+  thymeleaf:
+    cache: false
+  
+  jpa:
+    database-platform: org.hibernate.dialect.MySQLDialect
+    open-in-view: false
+    show-sql: true
+
+#콘솔창 로그
 logging:
+  pattern:
+    console: "[%d{HH:mm:ss.SSS}][%-5level][%logger.%method:line%line] - %msg%n" #로그 가독성 올리기
   level:
     "[org.springframework.web]": debug
